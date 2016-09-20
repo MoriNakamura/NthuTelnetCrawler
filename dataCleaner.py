@@ -16,7 +16,8 @@ def data_cleaner():
     sqlite = sqlite3.connect('nthu_course.db')
     cur = sqlite.cursor()
 
-    cur.execute('')
+    # cur.execute('CREATE TABLE IF NOT EXISTS articles (id INTEGER PRIMARY KEY AUTO INCREMENT, title TEXT NOT NULL,'
+    #             ' author TEXT NOT NULL, is_reply INTEGER NOT NULL, push_score INTEGER NOT NULL, published_date TEXT NOT NULL, );')
 
     re_ansi_escape = re.compile(r'\x1b\[\d{1,2};1H')
     re_ansi_escape2 = re.compile(r'\x1b\[\d*K')
